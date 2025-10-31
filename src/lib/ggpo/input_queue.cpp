@@ -150,20 +150,9 @@ InputQueue::GetInput(int requested_frame, GameInput *input)
 
       /*
        * The requested frame isn't in the queue.  Bummer.  This means we need
-       * to return a prediction frame.  Predict that the user will do the
-       * same thing they did last time.
+       * to return a prediction frame.  Predict that the user will do nothing.
        */
-      if (requested_frame == 0) {
-         Log("basing new prediction frame from nothing, you're client wants frame 0.\n");
-         _prediction.erase();
-      } else if (_last_added_frame == GameInput::NullFrame) {
-         Log("basing new prediction frame from nothing, since we have no frames yet.\n");
-         _prediction.erase();
-      } else {
-         Log("basing new prediction frame from previously added frame (queue entry:%d, frame:%d).\n",
-              PREVIOUS_FRAME(_head), _inputs[PREVIOUS_FRAME(_head)].frame);
-         _prediction = _inputs[PREVIOUS_FRAME(_head)];
-      }
+      _prediction.erase();
       _prediction.frame++;
    }
 
