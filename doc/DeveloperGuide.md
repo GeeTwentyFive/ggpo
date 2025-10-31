@@ -67,13 +67,17 @@ The `GGPOSession` object should only be used for a single game session.  If you 
 ### Sending Player Locations
 When you created the GGPOSession object passed in the number of players participating in the game, but didn't actually describe how to contact them.  To do so, call the `ggpo_add_player` function with a `GGPOPlayer` object describing each player.   The following example show how you might use ggpo_add_player in a 2 player game:
 
+UPDATE: You must supply a 1-based player number for each GGPOPlayer.
+
 ```
 GGPOPlayer p1, p2;
 GGPOPlayerHandle player_handles[2];
 
 p1.size = p2.size = sizeof(GGPOPlayer);
 p1.type = GGPO_PLAYERTYPE_LOCAL;                // local player
+p1.player_num = 1;
 p2.type = GGPO_PLAYERTYPE_REMOTE;               // remote player
+p2.player_num = 2;
 strcpy(p2.remote.ip_address, "192.168.0.100");  // ip addess of the player
 p2.remote.ip_address.port = 8001;               // port of that player
 
