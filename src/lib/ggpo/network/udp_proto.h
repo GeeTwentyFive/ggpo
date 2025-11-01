@@ -53,7 +53,7 @@ public:
          } network_interrupted;
       } u;
 
-      Event(Type t = Unknown);
+      Event(Type t = Unknown) : type(t) { }
    };
 
 public:
