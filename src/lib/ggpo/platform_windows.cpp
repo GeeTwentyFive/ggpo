@@ -5,6 +5,7 @@
  * in the LICENSE file.
  */
 
+#undef UNICODE
 #include "platform_windows.h"
 
 int

@@ -5,23 +5,23 @@
  * in the LICENSE file.
  */
 
-#ifndef _GGPO_LINUX_H_
-#define _GGPO_LINUX_H_
+// #ifndef _GGPO_LINUX_H_
+// #define _GGPO_LINUX_H_
 
-#include <stdio.h>
-#include <stdarg.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdarg.h>
+// #include <sys/types.h>
+// #include <unistd.h>
+// #include <stdlib.h>
 
-class Platform {
-public:  // types
-   typedef pid_t ProcessID;
+// class Platform {
+// public:  // types
+//    typedef pid_t ProcessID;
 
-public:  // functions
-   static ProcessID GetProcessID() { return getpid(); }
-   static void AssertFailed(char *msg) { }
-   static uint32 GetCurrentTimeMS();
-};
+// public:  // functions
+//    static ProcessID GetProcessID() { return getpid(); }
+//    static void AssertFailed(char *msg) { }
+//    static uint32 GetCurrentTimeMS();
+// };
 
-#endif
+// #endif

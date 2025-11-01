@@ -5,6 +5,8 @@
  * in the LICENSE file.
  */
 
+#undef UNICODE
+#include "platform_windows.h"
 #include "sync.h"
 
 Sync::Sync(UdpMsg::connect_status *connect_status) :

@@ -33,16 +33,10 @@ typedef char int8;
 typedef short int16;
 typedef int int32;
 
-/*
- * Additional headers
- */
-#if defined(_WINDOWS)
-#  include "platform_windows.h"
-#elif defined(__GNUC__)
-#  include "platform_linux.h"
-#else
-#  error Unsupported platform
-#endif
+#undef UNICODE
+#undef _GGPO_LINUX_H_
+#define _GGPO_WINDOWS_H
+#include "platform_windows.h"
 
 #include "log.h"
 

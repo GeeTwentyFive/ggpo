@@ -5,6 +5,9 @@
  * in the LICENSE file.
  */
 
+#undef UNICODE
+#include "platform_windows.h"
+#include <Windows.h>
 #include "types.h"
 #include "backends/p2p.h"
 #include "backends/synctest.h"
